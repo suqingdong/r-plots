@@ -1,3 +1,4 @@
+### usage
 ```bash
 Rscript barplot.R -h
 

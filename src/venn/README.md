@@ -1,4 +1,4 @@
-### Examples
+### usage
 ```bash
 Rscript venn.R -h
 
