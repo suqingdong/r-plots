@@ -30,10 +30,11 @@ if ( is.null(infile) || is.null(outfile) ) {
 }
 
 
-data <- read.table(infile, header=T, sep='\t', fileEncoding='UTF-8')
+data <- read.table(infile, header=T, sep='\t', na.strings='', fileEncoding='UTF-8')
 
 venn.diagram(
   x = as.list(data), 
+  na = 'remove',
   filename = outfile,
   imagetype = 'png',
   height = height,
@@ -47,5 +48,4 @@ venn.diagram(
   cat.cex = 0.6,
   cat.col = rainbow(length(data)),
   main = main
-
 )
